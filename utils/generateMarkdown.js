@@ -1,7 +1,6 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+
+//Renders the license Icon that is used
 function renderLicenseBadge(license) {
-  //return Github license
   if (license === "None") {
     return "";
   } else if (license === "Apache 2.0") {
@@ -15,8 +14,7 @@ function renderLicenseBadge(license) {
   } 
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+//renders the link in the table of contents
 function renderLicenseLink(license) {
   if (license === 'None') {
     return '';
@@ -24,11 +22,18 @@ function renderLicenseLink(license) {
   return ` * [License](#license)`;
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+//renders the license section 
 function renderLicenseSection(license) {
   if (license === 'None') {
     return '';
+  } else if (license === "Apache 2.0") {
+
+  } else if (license === "MIT") {
+    
+  } else if (license === "GNU GPL v3") {
+
+  } else if (license === "IBM") {
+
   }
   
 }
@@ -71,6 +76,7 @@ Please reach out with any questions you may have
 
 * Email: [${data.email}](mailto:${data.email})
 
+${renderLicenseSection(data.license)}
 `;
 }
 

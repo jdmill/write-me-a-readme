@@ -1,11 +1,13 @@
-// TODO: Include packages needed for this application
+//packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const writeFileAsync = util.promisify(fs.writeFile)
 const genFile = require("./utils/generateMarkdown");
+//makes this a promise. The application would end without it
+const writeFileAsync = util.promisify(fs.writeFile)
 
-// TODO: Create an array of questions for user input
+
+//Object of questions for user input
 const questions = {
   title: "What is this README's title?",
   desc: "What is this projects description?",
@@ -21,6 +23,7 @@ const questions = {
   email: "What is your email address?",
 };
 
+//User Prompts to build README
 const promptUser = () => {
   return inquirer.prompt([
     {
@@ -73,10 +76,10 @@ const promptUser = () => {
   ]);
 };
 
-// TODO: Create a function to initialize app
+//Function to initialize app
 const init = () => {
   promptUser()
-    .then((answers) => writeFileAsync('README.md', genFile(answers)))
+    .then((answers) => writeFileAsync('./output/README.md', genFile(answers)))
     .then(() => console.log('Successfully wrote to README.md'))
     .catch((err) => console.error(err));
 };
