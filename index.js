@@ -40,7 +40,6 @@ const promptUser = () => {
       type: "input",
       name: "install",
       message: questions.install,
-
     },
     {
       type: "input",
@@ -51,7 +50,7 @@ const promptUser = () => {
       type: "list",
       name: "license",
       message: questions.license,
-      choices: ["MIT", "Apache 2.0", "GNU GPL v3", "IBM", "None"],
+      choices: ["MIT", "Apache 2.0", "GNU GPL v3", "Unlicense", "None"],
     },
     {
       type: "input",
@@ -79,7 +78,7 @@ const promptUser = () => {
 //Function to initialize app
 const init = () => {
   promptUser()
-    .then((answers) => writeFileAsync('./output/README.md', genFile(answers)))
+    .then((answers) => writeFileAsync('./created/README.md', genFile(answers)))
     .then(() => console.log('Successfully wrote to README.md'))
     .catch((err) => console.error(err));
 };
