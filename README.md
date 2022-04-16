@@ -3,12 +3,13 @@
 ## Task 
 Create a command-line application that generates a README.md
 
+### Sample README.md
+Sample README.md found in the created folder
+
 ## Table of Contents
 
-* [User Story](#User Story)
-* [Acceptance Criteria](#Acceptance Criteria)
 * [Installation](#installation)
-* [Demonstration](#Demonstration)
+* [Demonstration](#demonstration)
 
 ## User Story
 
@@ -39,12 +40,17 @@ THEN I am taken to the corresponding section of the README
 ```
 
 ## Installation
-* ```bash
+```bash
 npm install
 ```
-*```bash
+
+```bash
 node index.js
 ```
+
+## GitHub Link
+
+https://github.com/jdmill/write-me-a-readme/
 
 ## Demonstration 
 
